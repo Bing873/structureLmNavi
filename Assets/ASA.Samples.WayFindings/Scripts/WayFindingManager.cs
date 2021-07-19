@@ -153,7 +153,16 @@ namespace Com.Reseul.ASA.Samples.WayFindings
                 if (!RouteInfo.LocatedAnchors.ContainsKey(identifier))
                 {
                     //アンカーの可視化が完了していない場合はアンカーを生成する。
-                    point = AnchorGenerateFactory.GenerateDestinationPointAnchor(anchorType, RouteInfo.RootPointObjects);
+                    if (anchorType == ((SettingPointAnchor.AnchorMode)2).ToString() || anchorType == ((SettingPointAnchor.AnchorMode)3).ToString() || anchorType == ((SettingPointAnchor.AnchorMode)4).ToString())
+                    {
+                        point = AnchorGenerateFactory.GenerateDestinationPointAnchor(anchorType, RouteInfo.RootLandmarkObjects);
+                    }
+
+                    else
+                    {
+                        point = AnchorGenerateFactory.GenerateDestinationPointAnchor(anchorType, RouteInfo.RootPointObjects);
+                    }
+                    
                     
                     gameObject = point.gameObject;
 

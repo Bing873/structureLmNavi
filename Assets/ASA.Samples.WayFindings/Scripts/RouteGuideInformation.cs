@@ -86,7 +86,11 @@ namespace Com.Reseul.ASA.Samples.WayFindings
         /// </summary>
         public Transform RootPointObjects { get; private set; }
 
-    #region Static Methods
+        ///     Gets the root element that contains the GameObject that visualizes the Landmark Anchor.
+        /// </summary>
+        public Transform RootLandmarkObjects { get; private set; }
+
+        #region Static Methods
 
         // Start is called before the first frame update
         public static RouteGuideInformation Instance
@@ -116,6 +120,8 @@ namespace Com.Reseul.ASA.Samples.WayFindings
         {
             RootPointObjects = transform.GetChild(0);
             RootLinkLineObjects = transform.GetChild(1);
+            RootLandmarkObjects = transform.GetChild(2);
+
         }
 
     #endregion

@@ -164,6 +164,7 @@ Transform:
   m_Children:
   - {fileID: 1402686155}
   - {fileID: 1847740937}
+  - {fileID: 886860624}
   m_Father: {fileID: 1693835463}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1995,6 +1996,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1f11485fc76263429ba3709e0c4aa12, type: 3}
+--- !u!1 &886860623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886860624}
+  - component: {fileID: 886860625}
+  m_Layer: 0
+  m_Name: Landmarks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &886860624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886860623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 113434896}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &886860625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886860623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede67a5857f376143b94bd0415e3a9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToBeHide: {fileID: 886860623}
 --- !u!4 &923854899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5199953558728550125, guid: 01253eafb724ca24789d8415cb55c409,
@@ -3768,7 +3813,7 @@ GameObject:
   - component: {fileID: 1727788996}
   - component: {fileID: 1727788997}
   m_Layer: 0
-  m_Name: Prefabs
+  m_Name: LMExample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3869,7 +3914,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - keyword: Show
+  - keyword: show
     response:
       m_PersistentCalls:
         m_Calls:
@@ -3904,6 +3949,36 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1847740938}
+          m_MethodName: hide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Landmark show
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 886860625}
+          m_MethodName: show
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Landmark hide
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 886860625}
           m_MethodName: hide
           m_Mode: 1
           m_Arguments:
