@@ -66,6 +66,10 @@ namespace Com.Reseul.ASA.Samples.WayFindings.Factories
         private SettingPointAnchor DFPointAnchor = null;
 
         [SerializeField]
+        [Tooltip("Set SettingPointAnchor prefab for create wayfinding instance.")]
+        private DestinationPointAnchor DestSettingPointAnchor = null;
+
+        [SerializeField]
         [Tooltip("Set VSELandmarkAnchor prefab for create wayfinding instance.")]
         private DestinationPointAnchor VSEDestPointAnchor = null;
 
@@ -115,6 +119,8 @@ namespace Com.Reseul.ASA.Samples.WayFindings.Factories
                ? InstanceObje.SFDestPointAnchor
                : destmode == ((SettingPointAnchor.AnchorMode)4).ToString()
                ? InstanceObje.DFDestPointAnchor
+               : destmode == ((SettingPointAnchor.AnchorMode)1).ToString()
+               ? InstanceObje.DestSettingPointAnchor
                : InstanceObje.destinationPointAnchor);
             obj.transform.parent = parent;
             return obj;

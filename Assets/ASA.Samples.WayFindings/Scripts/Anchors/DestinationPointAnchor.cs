@@ -103,7 +103,7 @@ namespace Com.Reseul.ASA.Samples.WayFindings.Anchors
             transform.position = Vector3.Lerp(transform.position,
                 new Vector3(transform.position.x, Camera.main.transform.position.y, transform.position.z), 0.015f);
             var enabled = !string.IsNullOrEmpty(DestinationTitle);
-            InnerObjectAnimate();
+            //InnerObjectAnimate();
             //OuterObjectAnimate(enabled);
            // LabelObjectAnimate(enabled);
             SetNearbyAutoSearch(enabled);
